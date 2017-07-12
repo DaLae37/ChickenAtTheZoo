@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChickenGame", "ChickenGame.csproj", "{65DB01C5-C201-F7D4-7E41-28CEFE64C3E1}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{9AA51FBA-0D68-C138-D99D-7ABB1B77CE08}") = "ChickenGame", "Assembly-CSharp.csproj", "{ED3F2172-9CF3-AA9F-EFBA-65F0B49DC34B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{65DB01C5-C201-F7D4-7E41-28CEFE64C3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65DB01C5-C201-F7D4-7E41-28CEFE64C3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65DB01C5-C201-F7D4-7E41-28CEFE64C3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65DB01C5-C201-F7D4-7E41-28CEFE64C3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED3F2172-9CF3-AA9F-EFBA-65F0B49DC34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED3F2172-9CF3-AA9F-EFBA-65F0B49DC34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED3F2172-9CF3-AA9F-EFBA-65F0B49DC34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED3F2172-9CF3-AA9F-EFBA-65F0B49DC34B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

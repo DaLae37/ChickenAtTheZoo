@@ -65,6 +65,9 @@ public class PlayerControl : MonoBehaviour {
     {
         leftchk[ctrPlayerIndex] = true;
         view = false;
+		Vector3 scale = transform.localScale;
+		scale.x = -Mathf.Abs (scale.x);
+		playerList [ctrPlayerIndex].transform.localScale = scale;
     }
     void LeftUp()
     {
@@ -73,7 +76,10 @@ public class PlayerControl : MonoBehaviour {
     void RightDown()
     {
         rightchk[ctrPlayerIndex] = true;
-        view = true;
+		view = true;
+		Vector3 scale = transform.localScale;
+		scale.x = Mathf.Abs (scale.x);
+		playerList [ctrPlayerIndex].transform.localScale = scale;
     }
     void RightUp()
     {
