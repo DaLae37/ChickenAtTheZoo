@@ -5,9 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class stageSceneChange : MonoBehaviour
 {
+    void Update()
+    {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                mainScene();
+            }
+        }
+    }
     public void mainScene()
     {
         SceneManager.LoadScene("mainScene");
+    }
+    public void tutorial1()
+    {
+        SceneManager.LoadScene("tutorial1");
+    }
+    public void tutorial2()
+    {
+        SceneManager.LoadScene("tutorial2");
+    }
+    public void tutorial3()
+    {
+        SceneManager.LoadScene("tutorial3");
     }
     public void stage1()
     {

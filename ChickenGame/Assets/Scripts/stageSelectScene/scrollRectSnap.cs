@@ -33,7 +33,7 @@ public class scrollRectSnap : MonoBehaviour {
             distReposition[i] = center.GetComponent<RectTransform>().position.x - bttn[i].GetComponent<RectTransform>().position.x;
             distance[i] = Mathf.Abs(distReposition[i]);
 
-            if(distReposition[i] > 1280)
+            if(distReposition[i] > 900)
             {
                 float curX = bttn[i].GetComponent<RectTransform>().anchoredPosition.x;
                 float curY = bttn[i].GetComponent<RectTransform>().anchoredPosition.y;
@@ -41,7 +41,7 @@ public class scrollRectSnap : MonoBehaviour {
                 Vector2 newAnchoredPos = new Vector2(curX + (bttnLength * bttnDistance), curY);
                 bttn[i].GetComponent<RectTransform>().anchoredPosition = newAnchoredPos;
             }
-            if(distReposition[i] < -1280)
+            if(distReposition[i] < -900)
             {
                 float curX = bttn[i].GetComponent<RectTransform>().anchoredPosition.x;
                 float curY = bttn[i].GetComponent<RectTransform>().anchoredPosition.y;
