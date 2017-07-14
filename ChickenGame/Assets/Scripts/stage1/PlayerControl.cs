@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour {
     public bool []isJumping = new bool[3];
     public bool []leftchk = new bool[3];
     public bool []rightchk = new bool[3];
-    public bool view = true;
+
     public bool onLionGround = false;
 
     public Rigidbody2D rb;
@@ -64,7 +64,6 @@ public class PlayerControl : MonoBehaviour {
 	void LeftDown()
     {
         leftchk[ctrPlayerIndex] = true;
-        view = false;
 		Vector3 scale = transform.localScale;
 		scale.x = -Mathf.Abs (scale.x);
 		playerList [ctrPlayerIndex].transform.localScale = scale;
@@ -76,7 +75,6 @@ public class PlayerControl : MonoBehaviour {
     void RightDown()
     {
         rightchk[ctrPlayerIndex] = true;
-		view = true;
 		Vector3 scale = transform.localScale;
 		scale.x = Mathf.Abs (scale.x);
 		playerList [ctrPlayerIndex].transform.localScale = scale;
