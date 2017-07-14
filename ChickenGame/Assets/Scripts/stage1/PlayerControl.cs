@@ -86,10 +86,21 @@ public class PlayerControl : MonoBehaviour {
 
     void JumpClick()
     {
+		if (ctrPlayerIndex == 1) {
+			if (isJumping[ctrPlayerIndex] == true && isDashing[ctrPlayerIndex] == false) {
+				rb.velocity = new Vector3(dashSpeed, 0, 0);
+				isDashing[ctrPlayerIndex] = true;
+			}
+		}
         if (isJumping[ctrPlayerIndex] == false)
 		{
-			isJumping[ctrPlayerIndex] = true;
-			rb.velocity = new Vector3(0, jump, 0);
+			if (ctrPlayerIndex == 2) {
+				isJumping [ctrPlayerIndex] = true;
+				rb.velocity = new Vector3 (0, jump+1f, 0);
+			} else {
+				isJumping [ctrPlayerIndex] = true;
+				rb.velocity = new Vector3 (0, jump, 0);
+			}
         }
     }
 	void changePlayer(){
@@ -108,13 +119,6 @@ public class PlayerControl : MonoBehaviour {
 		rb = playerList[ctrPlayerIndex].GetComponent<Rigidbody2D>();
 	}
 
-	void dash(){
-		if (isJumping[ctrPlayerIndex] == true && isDashing[ctrPlayerIndex] == false) {
-			rb.velocity = new Vector3(dashSpeed, 0, 0);
-			isDashing[ctrPlayerIndex] = true;
-		}
-	}
-  
 
     void comMove()
     {

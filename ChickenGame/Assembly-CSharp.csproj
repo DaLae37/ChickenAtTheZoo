@@ -48,6 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\mainScene\mainSceneChange.cs" />
      <Compile Include="Assets\Scripts\mainScene\mainSceneManager.cs" />
+     <Compile Include="Assets\Scripts\settingScene\creditSetting.cs" />
+     <Compile Include="Assets\Scripts\settingScene\dataSetting.cs" />
+     <Compile Include="Assets\Scripts\settingScene\settingSceneCtr.cs" />
+     <Compile Include="Assets\Scripts\settingScene\soundSetting.cs" />
      <Compile Include="Assets\Scripts\stage1\Aligay.cs" />
      <Compile Include="Assets\Scripts\stage1\Lion.cs" />
      <Compile Include="Assets\Scripts\stage1\Player.cs" />
