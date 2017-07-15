@@ -21,28 +21,28 @@ public class PlayerControl : MonoBehaviour {
     public Rigidbody2D rb;
     public int ctrPlayerIndex = 0;
 
-    void Awake()
+    public void Awake()
     {
         if (!instance)
         {
             instance = this;
         }
-        for(int i=0; i<3; i++)
+        for (int i = 0; i < 3; i++)
         {
             isDashing[i] = false;
             isJumping[i] = false;
             leftchk[i] = false;
             rightchk[i] = false;
         }
-}
+    }
 
-    void Start()
+    public void Start()
     {
         rb = playerList[ctrPlayerIndex].GetComponent<Rigidbody2D>();
     }
 
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         
         comMove();
@@ -61,30 +61,30 @@ public class PlayerControl : MonoBehaviour {
     }
 
 
-	void LeftDown()
+	public void LeftDown()
     {
         leftchk[ctrPlayerIndex] = true;
 		Vector3 scale = transform.localScale;
 		scale.x = -Mathf.Abs (scale.x);
 		playerList [ctrPlayerIndex].transform.localScale = scale;
     }
-    void LeftUp()
+    public void LeftUp()
     {
         leftchk[ctrPlayerIndex] = false;
     }
-    void RightDown()
+    public void RightDown()
     {
         rightchk[ctrPlayerIndex] = true;
 		Vector3 scale = transform.localScale;
 		scale.x = Mathf.Abs (scale.x);
 		playerList [ctrPlayerIndex].transform.localScale = scale;
     }
-    void RightUp()
+    public void RightUp()
     {
         rightchk[ctrPlayerIndex] = false;
     }
 
-    void JumpClick()
+    public void JumpClick()
     {
 		if (ctrPlayerIndex == 1) {
 			if (isJumping[ctrPlayerIndex] == true && isDashing[ctrPlayerIndex] == false) {
@@ -103,7 +103,7 @@ public class PlayerControl : MonoBehaviour {
 			}
         }
     }
-	void changePlayer(){
+    public void changePlayer(){
 		switch (ctrPlayerIndex)
 		{
 		case 0:
@@ -120,7 +120,7 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 
-    void comMove()
+   public void comMove()
     {
         if (Input.GetKey("w") && isJumping[ctrPlayerIndex] == false)
         {
