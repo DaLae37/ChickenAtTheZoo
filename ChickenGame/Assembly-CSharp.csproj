@@ -46,6 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Global\Pado.cs" />
+     <Compile Include="Assets\Scripts\Global\Player.cs" />
+     <Compile Include="Assets\Scripts\Global\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\mainScene\mainSceneChange.cs" />
      <Compile Include="Assets\Scripts\mainScene\mainSceneManager.cs" />
      <Compile Include="Assets\Scripts\settingScene\creditSetting.cs" />
@@ -54,10 +57,18 @@
      <Compile Include="Assets\Scripts\settingScene\soundSetting.cs" />
      <Compile Include="Assets\Scripts\stage1\Aligay.cs" />
      <Compile Include="Assets\Scripts\stage1\Lion.cs" />
-     <Compile Include="Assets\Scripts\stage1\Player.cs" />
-     <Compile Include="Assets\Scripts\stage1\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\stage1\redButton.cs" />
      <Compile Include="Assets\Scripts\stageSelectScene\scrollRectSnap.cs" />
      <Compile Include="Assets\Scripts\stageSelectScene\stageSceneChange.cs" />
+     <Compile Include="Assets\Scripts\tutorial1\isClear.cs" />
+     <Compile Include="Assets\Scripts\tutorial1\tutorialManager.cs" />
+     <Compile Include="Assets\Scripts\tutorial2\RounChicken.cs" />
+     <Compile Include="Assets\Scripts\tutorial2\tutorial2Manager.cs" />
+     <Compile Include="Assets\Scripts\tutorial3\TutoClear.cs" />
+     <Compile Include="Assets\Scripts\tutorial3\Tutorial3Manager.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -72,6 +83,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

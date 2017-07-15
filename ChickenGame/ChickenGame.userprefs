@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\stage1\Aligay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\stage1\Lion.cs">
     <Files>
-      <File FileName="Assets\Scripts\stage1\Player.cs" Line="24" Column="32" />
-      <File FileName="Assets\Scripts\stage1\PlayerControl.cs" Line="111" Column="10" />
-      <File FileName="Assets\Scripts\stage1\Lion.cs" Line="13" Column="3" />
-      <File FileName="Assets\Scripts\stage1\Aligay.cs" Line="29" Column="33" />
+      <File FileName="Assets\Scripts\stage1\Lion.cs" Line="42" Column="29" />
+      <File FileName="Assets\Scripts\stage1\Aligay.cs" Line="76" Column="1" />
+      <File FileName="Assets\Scripts\Global\PlayerControl.cs" Line="66" Column="6" />
+      <File FileName="Assets\Scripts\Global\Player.cs" Line="23" Column="46" />
+      <File FileName="Assets\Scripts\stage1\redButton.cs" Line="18" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

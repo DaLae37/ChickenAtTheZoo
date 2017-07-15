@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
             {
                 PlayerControl.instance.isJumping[2] = false;
                 PlayerControl.instance.isDashing[2] = false;
+				PlayerControl.instance.doubleJum = false;
             }
 			PlayerControl.instance.rb.velocity = new Vector3 (0, 0, 0);
         }

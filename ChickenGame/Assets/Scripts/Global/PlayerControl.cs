@@ -17,6 +17,8 @@ public class PlayerControl : MonoBehaviour {
     public bool []rightchk = new bool[3];
     public bool onLionGround = false;
 
+	public bool doubleJum = false;
+
     public Rigidbody2D rb;
     public int ctrPlayerIndex = 0;
 
@@ -90,17 +92,31 @@ public class PlayerControl : MonoBehaviour {
 				rb.velocity = new Vector3(dashSpeed, 0, 0);
 				isDashing[ctrPlayerIndex] = true;
 			}
-		}
-        if (isJumping[ctrPlayerIndex] == false)
-		{
-			if (ctrPlayerIndex == 2) {
-				isJumping [ctrPlayerIndex] = true;
-				rb.velocity = new Vector3 (0, (jump+3.5f), 0);
-			} else {
+			if (isJumping[ctrPlayerIndex] == false)
+			{
 				isJumping [ctrPlayerIndex] = true;
 				rb.velocity = new Vector3 (0, jump, 0);
 			}
-        }
+		}
+
+		if (ctrPlayerIndex == 2) {
+			if (isJumping[ctrPlayerIndex] == true && doubleJum == false) {
+				doubleJum = true;
+				rb.velocity = new Vector3(0,jump, 0);
+			}
+			if (isJumping [ctrPlayerIndex] == false) {
+				isJumping [ctrPlayerIndex] = true;
+				rb.velocity = new Vector3 (0, (jump), 0);
+			}
+		}
+		else {
+			if (isJumping[ctrPlayerIndex] == false)
+			{
+				isJumping [ctrPlayerIndex] = true;
+				rb.velocity = new Vector3 (0, jump, 0);
+			}
+		}
+        
     }
     public void changePlayer(){
 		switch (ctrPlayerIndex)

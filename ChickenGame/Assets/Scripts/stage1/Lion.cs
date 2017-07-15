@@ -6,10 +6,12 @@ public class Lion : MonoBehaviour {
 
 	public float speed = 0.3f; 
 	public float range = 10f;
+	public bool die = false;
 
 	void FixedUpdate () {
 
-		chkDistance ();
+		if(die==false)
+			chkDistance ();
 
 
 	}
@@ -33,4 +35,12 @@ public class Lion : MonoBehaviour {
 
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D	 col){
+		if (col.gameObject.tag == "Stone"&&col.gameObject.transform.position.y>transform.position.y) {
+			die = true;
+			Destroy (col.gameObject);
+		}
+	}
+
 }
