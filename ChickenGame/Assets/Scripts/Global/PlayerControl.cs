@@ -36,7 +36,6 @@ public class PlayerControl : MonoBehaviour {
             isJumping[i] = false;
             leftchk[i] = false;
             rightchk[i] = false;
-			playerchk [i] = false;
         }
     }
 

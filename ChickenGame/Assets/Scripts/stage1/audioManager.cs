@@ -26,10 +26,10 @@ public class audioManager : MonoBehaviour {
 	void Awake(){
 		if (audioManager.instance == null)
 			audioManager.instance = this;
+		myAudio = GetComponent<AudioSource> ();
 	}
 
 	void Start(){
-		myAudio = GetComponent<AudioSource> ();
 	}
 
 	public void StartSound(){

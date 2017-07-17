@@ -7,6 +7,9 @@ public class stage3Lion : MonoBehaviour {
 	public float speed = 0.3f; 
 	public float range = 5f;
 	public bool die = false;
+	public GameObject dead;
+	public GameObject spin;
+
 	void FixedUpdate () {
 
 		if(die==false)
@@ -38,9 +41,11 @@ public class stage3Lion : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D	 col){
 		if (col.gameObject.tag == "Stone"&&col.gameObject.transform.position.y>transform.position.y) {
 			GlobalAudioManager.instance.Lion_dSound ();
-			gameObject.tag = "Ground";
-			die = true;
 			Destroy (col.gameObject);
+			Instantiate (dead, transform.position, Quaternion.identity);
+			transform.Translate (new Vector3 (-0.2f, 0.7f, 0));
+			Instantiate (spin, transform.position, Quaternion.identity);
+			Destroy (this.gameObject);
 		}
 	}
 }

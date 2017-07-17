@@ -1,26 +1,31 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\stage1\stage1Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\stage1\spin.cs">
     <Files>
-      <File FileName="Assets\Scripts\stage1\audioManager.cs" Line="51" Column="41" />
-      <File FileName="Assets\Scripts\stage1\Lion.cs" Line="38" Column="44" />
-      <File FileName="Assets\Scripts\Global\PlayerControl.cs" Line="100" Column="46" />
-      <File FileName="Assets\Scripts\Global\Player.cs" Line="13" Column="3" />
-      <File FileName="Assets\Scripts\stage1\redButton.cs" Line="16" Column="39" />
-      <File FileName="Assets\Scripts\stage1\stage1Player.cs" Line="46" Column="75" />
+      <File FileName="Assets\Scripts\stage1\audioManager.cs" Line="29" Column="42" />
+      <File FileName="Assets\Scripts\stage1\Lion.cs" Line="44" Column="48" />
+      <File FileName="Assets\Scripts\Global\PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Global\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\stage1\redButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\stage1\stage1Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\settingScene\soundSetting.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\settingScene\dataSetting.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\settingScene\settingSceneCtr.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\settingScene\creditSetting.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\mainScene\mainSceneManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\mainScene\mainSceneChange.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\stage1\stage1PlayerControl.cs" Line="10" Column="2" />
-      <File FileName="Assets\Scripts\tutorial3\Tutorial3Manager.cs" Line="16" Column="28" />
-      <File FileName="Assets\Scripts\loadingScene\loadingScenes.cs" Line="5" Column="1" />
-      <File FileName="Assets\Scripts\Global\GlobalAudioManager.cs" Line="109" Column="1" />
-      <File FileName="Assets\Scripts\tutorial1\box.cs" Line="13" Column="1" />
-      <File FileName="Assets\Scripts\tutorial1\Lightter.cs" Line="16" Column="48" />
-      <File FileName="Assets\Scripts\clearScene\clearSceneManager.cs" Line="12" Column="50" />
+      <File FileName="Assets\Scripts\stage1\stage1PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tutorial3\Tutorial3Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\loadingScene\loadingScenes.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Global\GlobalAudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tutorial1\box.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tutorial1\Lightter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\clearScene\clearSceneManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\stage2\Lions.cs" Line="64" Column="48" />
+      <File FileName="Assets\Scripts\stage1\deadLion.cs" Line="18" Column="16" />
+      <File FileName="Assets\Scripts\stage2\Turtle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\stage1\spin.cs" Line="8" Column="30" />
+      <File FileName="Assets\Scripts\stage3\stage3Lion.cs" Line="46" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -61,7 +61,9 @@
      <Compile Include="Assets\Scripts\settingScene\soundSetting.cs" />
      <Compile Include="Assets\Scripts\stage1\Lion.cs" />
      <Compile Include="Assets\Scripts\stage1\audioManager.cs" />
+     <Compile Include="Assets\Scripts\stage1\deadLion.cs" />
      <Compile Include="Assets\Scripts\stage1\redButton.cs" />
+     <Compile Include="Assets\Scripts\stage1\spin.cs" />
      <Compile Include="Assets\Scripts\stage1\stage1Manager.cs" />
      <Compile Include="Assets\Scripts\stage1\stage1Player.cs" />
      <Compile Include="Assets\Scripts\stage1\stage1PlayerControl.cs" />

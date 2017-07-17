@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
             GlobalAudioManager.instance.PotalSound();
             if (this.ToString().Equals("player1 (Player)"))
             {
-                PlayerControl.instance.playerchk[0] = true;
+//                PlayerControl.instance.playerchk[0] = true;
                 if (!PlayerControl.instance.playerchk[1])
                     PlayerControl.instance.ctrPlayerIndex = 1;
                 else if (!PlayerControl.instance.playerchk[2])
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour {
             }
             else if (this.ToString().Equals("player2 (Player)"))
             {
-                PlayerControl.instance.playerchk[1] = true;
+//                PlayerControl.instance.playerchk[1] = true;
                 if (!PlayerControl.instance.playerchk[2])
                     PlayerControl.instance.ctrPlayerIndex = 2;
                 else if (!PlayerControl.instance.playerchk[0])
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
             }
             else if (this.ToString().Equals("player3 (Player)"))
             {
-                PlayerControl.instance.playerchk[2] = true;
+//               PlayerControl.instance.playerchk[2] = true;
                 if (!PlayerControl.instance.playerchk[0])
                     PlayerControl.instance.ctrPlayerIndex = 0;
                 else if (!PlayerControl.instance.playerchk[1])

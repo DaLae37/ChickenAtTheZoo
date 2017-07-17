@@ -6,7 +6,8 @@ public class Lions : MonoBehaviour {
 
     public float speed = 0.3f;
     public float range = 10f;
-    public bool die = false;
+	public GameObject dead ;
+	public GameObject spin;
     public bool isTacked = false;
     public int Tracked;
     void FixedUpdate()
@@ -25,8 +26,7 @@ public class Lions : MonoBehaviour {
 
         }
         
-        if (die == false && isTacked)
-            chkDistance();
+        chkDistance();
     }
     void chkDistance()
     {
@@ -60,7 +60,10 @@ public class Lions : MonoBehaviour {
     {
         if (col.gameObject.tag == "Stone" && col.gameObject.transform.position.y > transform.position.y)
         {
-            die = true;
+			Instantiate (dead, transform.position, Quaternion.identity);
+			transform.Translate (new Vector3 (-0.2f, 0.7f, 0));
+			Instantiate (spin, transform.position, Quaternion.identity);
+			Destroy (this.gameObject);
             Destroy(col.gameObject);
         }
     }

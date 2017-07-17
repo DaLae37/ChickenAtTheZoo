@@ -6,7 +6,7 @@ public class box : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D	 col){
 		if (col.gameObject.tag == "Player") {
-			GlobalAudioManager.instance.StoneSound ();
+			//GlobalAudioManager.instance.StoneSound ();
 		}
 	}
 }
