@@ -14,8 +14,10 @@ public class PlayerControl : MonoBehaviour {
 	public bool []isDashing = new bool[3];
     public bool []isJumping = new bool[3];
     public bool []leftchk = new bool[3];
-    public bool []rightchk = new bool[3];
+	public bool[] rightchk = new bool[3];
     public bool onLionGround = false;
+
+	private bool[] playerchk = new bool[3];
 
 	public bool doubleJum = false;
 
@@ -34,6 +36,7 @@ public class PlayerControl : MonoBehaviour {
             isJumping[i] = false;
             leftchk[i] = false;
             rightchk[i] = false;
+			playerchk [i] = true;
         }
     }
 

@@ -14,7 +14,12 @@ public class Player : MonoBehaviour {
         GlobalAudioManager.instance.StartSound();
     }
 
-
+	public void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag == "Water")
+		{
+			SceneManager.LoadScene("gameOverScene");
+		}
+	}
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.collider.tag == "Escape") {
@@ -43,9 +48,11 @@ public class Player : MonoBehaviour {
             }
 			PlayerControl.instance.rb.velocity = new Vector3 (0, 0, 0);
         }
-        else if(collision.collider.tag == "water")
-        {
-            SceneManager.LoadScene("gameOverScene");
-        }
     }
+	public void OnCollisionStay2D(Collision2D collision)
+	{
+		if (collision.collider.tag == "Crocodile") {
+			SceneManager.LoadScene ("gameOverScene");
+		}
+	}
 }

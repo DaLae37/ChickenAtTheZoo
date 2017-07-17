@@ -47,7 +47,7 @@ public class Aligay : MonoBehaviour {
 		
 	}
 	void move(){
-		transform.Translate(new Vector3(moveSpeed,0,0));
+		transform.Translate(new Vector3(-moveSpeed,0,0));
 	}
 
 	void chkDistance(){
@@ -67,6 +67,9 @@ public class Aligay : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D	 col){
 		if (col.gameObject.tag == "Ground") {
 			moveSpeed = -moveSpeed;
+			Vector3 scale = transform.localScale;
+			scale.x = -(scale.x);
+			transform.localScale = scale;
 		}
 		if (col.gameObject.tag == "Player") {
 			onPlayer = true;

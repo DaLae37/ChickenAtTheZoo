@@ -67,8 +67,15 @@
      <Compile Include="Assets\Scripts\stage1\stage1PlayerControl.cs" />
      <Compile Include="Assets\Scripts\stage2\Aligay.cs" />
      <Compile Include="Assets\Scripts\stage2\Lions.cs" />
+     <Compile Include="Assets\Scripts\stage2\Lstage2Button.cs" />
+     <Compile Include="Assets\Scripts\stage2\Rstage2Door.cs" />
+     <Compile Include="Assets\Scripts\stage2\Turtle.cs" />
      <Compile Include="Assets\Scripts\stage2\stage2Manager.cs" />
+     <Compile Include="Assets\Scripts\stage3\stage3Button.cs" />
+     <Compile Include="Assets\Scripts\stage3\stage3Lion.cs" />
      <Compile Include="Assets\Scripts\stage3\stage3Manager.cs" />
+     <Compile Include="Assets\Scripts\stage3\stage3Player.cs" />
+     <Compile Include="Assets\Scripts\stage3\stage3PlayerControl.cs" />
      <Compile Include="Assets\Scripts\stage4\stage4Manager.cs" />
      <Compile Include="Assets\Scripts\stageSelectScene\scrollRectSnap.cs" />
      <Compile Include="Assets\Scripts\stageSelectScene\stageSceneChange.cs" />
