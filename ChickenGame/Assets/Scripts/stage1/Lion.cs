@@ -7,7 +7,6 @@ public class Lion : MonoBehaviour {
 	public float speed = 0.3f; 
 	public float range = 10f;
 	public bool die = false;
-
 	void FixedUpdate () {
 
 		if(die==false)
@@ -38,6 +37,8 @@ public class Lion : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D	 col){
 		if (col.gameObject.tag == "Stone"&&col.gameObject.transform.position.y>transform.position.y) {
+			audioManager.instance.Lion_dSound ();
+			gameObject.tag = "Ground";
 			die = true;
 			Destroy (col.gameObject);
 		}

@@ -63,6 +63,7 @@ public class stage1PlayerControl : MonoBehaviour {
 
 	public void LeftDown()
 	{
+		audioManager.instance.ButtonSound ();
 		leftchk[ctrPlayerIndex] = true;
 		Vector3 scale = transform.localScale;
 		scale.x = -Mathf.Abs (scale.x);
@@ -74,6 +75,7 @@ public class stage1PlayerControl : MonoBehaviour {
 	}
 	public void RightDown()
 	{
+		audioManager.instance.ButtonSound ();
 		rightchk[ctrPlayerIndex] = true;
 		Vector3 scale = transform.localScale;
 		scale.x = Mathf.Abs (scale.x);
@@ -89,17 +91,21 @@ public class stage1PlayerControl : MonoBehaviour {
 
 		if (ctrPlayerIndex == 1) {
 			if (isJumping[ctrPlayerIndex] == true && doubleJum == false) {
+				audioManager.instance.JumpSound ();
+
 				doubleJum = true;
 				rb.velocity = new Vector3(0,jump, 0);
 			}
 			if (isJumping [ctrPlayerIndex] == false) {
+				audioManager.instance.JumpSound ();
 				isJumping [ctrPlayerIndex] = true;
 				rb.velocity = new Vector3 (0, (jump), 0);
 			}
 		}
 		else {
 			if (isJumping[ctrPlayerIndex] == false)
-			{
+			{	
+				audioManager.instance.JumpSound ();
 				isJumping [ctrPlayerIndex] = true;
 				rb.velocity = new Vector3 (0, jump, 0);
 			}
@@ -107,6 +113,7 @@ public class stage1PlayerControl : MonoBehaviour {
 
 	}
 	public void changePlayer(){
+		audioManager.instance.ChangeSound ();
 		switch (ctrPlayerIndex)
 		{
 		case 0:

@@ -4,9 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class stage1Player : MonoBehaviour {
+	void Start(){
+		audioManager.instance.StartSound ();
+	}
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
+		if (collision.collider.tag == "Stone") {
+			audioManager.instance.StoneSound ();
+		}
+		if (collision.collider.tag == "Lion") {
+			SceneManager.LoadScene ("gameOverScene");
+
+		}
 		if (collision.gameObject.tag == "Escape") {
+			audioManager.instance.PotalSound ();
 			if (this.ToString().Equals("player1 (stage1Player)"))
 			{
 				Debug.Log ("Escape");
@@ -32,7 +43,8 @@ public class stage1Player : MonoBehaviour {
 			}
 		}
 
-		if (collision.collider.tag == "Player"||collision.collider.tag == "Ground") {
+		if (collision.collider.tag == "Player"||collision.collider.tag == "Stone"||collision.collider.tag == "Ground") {
+			audioManager.instance.GroundSound ();
 			if (this.ToString().Equals("player1 (stage1Player)"))
 			{
 				stage1PlayerControl.instance.isJumping[0] = false;

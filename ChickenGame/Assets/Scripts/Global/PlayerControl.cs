@@ -38,7 +38,7 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public void Start()
-    {
+	{
         rb = playerList[ctrPlayerIndex].GetComponent<Rigidbody2D>();
     }
 
@@ -64,6 +64,7 @@ public class PlayerControl : MonoBehaviour {
 
 	public void LeftDown()
     {
+		GlobalAudioManager.instance.ButtonSound ();
         leftchk[ctrPlayerIndex] = true;
 		Vector3 scale = transform.localScale;
 		scale.x = -Mathf.Abs (scale.x);
@@ -74,7 +75,8 @@ public class PlayerControl : MonoBehaviour {
         leftchk[ctrPlayerIndex] = false;
     }
     public void RightDown()
-    {
+	{
+		GlobalAudioManager.instance.ButtonSound ();
         rightchk[ctrPlayerIndex] = true;
 		Vector3 scale = transform.localScale;
 		scale.x = Mathf.Abs (scale.x);
@@ -89,11 +91,13 @@ public class PlayerControl : MonoBehaviour {
     {
 		if (ctrPlayerIndex == 1) {
 			if (isJumping[ctrPlayerIndex] == true && isDashing[ctrPlayerIndex] == false) {
+				GlobalAudioManager.instance.DashSound ();
 				rb.velocity = new Vector3(dashSpeed, 0, 0);
 				isDashing[ctrPlayerIndex] = true;
 			}
 			if (isJumping[ctrPlayerIndex] == false)
 			{
+				GlobalAudioManager.instance.JumpSound ();
 				isJumping [ctrPlayerIndex] = true;
 				rb.velocity = new Vector3 (0, jump, 0);
 			}
@@ -101,10 +105,12 @@ public class PlayerControl : MonoBehaviour {
 
 		if (ctrPlayerIndex == 2) {
 			if (isJumping[ctrPlayerIndex] == true && doubleJum == false) {
+				GlobalAudioManager.instance.JumpSound ();
 				doubleJum = true;
 				rb.velocity = new Vector3(0,jump, 0);
 			}
 			if (isJumping [ctrPlayerIndex] == false) {
+				GlobalAudioManager.instance.JumpSound ();
 				isJumping [ctrPlayerIndex] = true;
 				rb.velocity = new Vector3 (0, (jump), 0);
 			}
@@ -112,6 +118,7 @@ public class PlayerControl : MonoBehaviour {
 		else {
 			if (isJumping[ctrPlayerIndex] == false)
 			{
+				GlobalAudioManager.instance.JumpSound ();
 				isJumping [ctrPlayerIndex] = true;
 				rb.velocity = new Vector3 (0, jump, 0);
 			}

@@ -13,6 +13,7 @@ public class redButton : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "Player"&&chk==false&&col.transform.position.y>transform.position.y+0.2f) {
+			audioManager.instance.DoorSound ();
 			chk=true;
 			gameObject.GetComponent<SpriteRenderer> ().sprite = usedButton;
 

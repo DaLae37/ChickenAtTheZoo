@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 63120c61105cf164182457ce605e60d3
+timeCreated: 1500294925
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - start: {fileID: 8300000, guid: d70c9360a47464547ba70c80fade0fb8, type: 3}
+  - ground: {fileID: 8300000, guid: 1b46066afd153be4c86ec5204963ab1d, type: 3}
+  - jump: {fileID: 8300000, guid: f44cfddd62d31df438bbd2ea745d95bd, type: 3}
+  - dash: {fileID: 8300000, guid: d737f81b766452f458098d86bcfc86f9, type: 3}
+  - potal: {fileID: 8300000, guid: 681a040fa2c2d9a4fac88499fcd3ed22, type: 3}
+  - button: {fileID: 8300000, guid: f4ec8a0f59feac745b9cb9f81ad3ce13, type: 3}
+  - change: {fileID: 8300000, guid: d4674fe17b573a6439d3041e633073da, type: 3}
+  - lion_s: {fileID: 8300000, guid: fb77a9880f12db948856fa750308f3e5, type: 3}
+  - lion_d: {fileID: 8300000, guid: 34ffba7fd1544af418f7d3b81f419f09, type: 3}
+  - door: {fileID: 8300000, guid: 1c80b677bed158f428ced944eacfd3c6, type: 3}
+  - stone: {fileID: 8300000, guid: 69a2d3d0db21d594ab5018f69dc2e417, type: 3}
+  - stonemov: {fileID: 8300000, guid: d1e8d8d302bbacf4bab4c4dfe80c6200, type: 3}
+  - fallstone: {fileID: 8300000, guid: 4c4eeb17431ca78468dc5ade481e9a11, type: 3}
+  - upblock: {fileID: 8300000, guid: 72908b515c35dca43b863c2d5fd91818, type: 3}
+  - clear: {fileID: 8300000, guid: 0cbc246cfea981d4caf19d2bac9c49e9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

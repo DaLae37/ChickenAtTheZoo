@@ -1,11 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-		if (collision.collider.tag == "Player"||collision.collider.tag == "Ground") {
+
+
+	void Awake(){
+	}
+
+	void Start(){
+	}
+
+
+	public void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.collider.tag == "Escape") {
+			GlobalAudioManager.instance.PotalSound ();
+		}
+		if (collision.collider.tag == "Lion") {
+			SceneManager.LoadScene ("gameOverScene");
+		}
+		if (collision.collider.tag == "Player"||collision.collider.tag == "Stone"||collision.collider.tag == "Ground") {
+			GlobalAudioManager.instance.GroundSound ();
             if (this.ToString().Equals("player1 (Player)"))
             {
                 PlayerControl.instance.isJumping[0] = false;

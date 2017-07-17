@@ -8,6 +8,7 @@ public class clearSceneManager : MonoBehaviour
     string nowScene;
     void Start()
     {
+		GlobalAudioManager.instance.ClearSound ();
         nowScene = PlayerPrefs.GetString("load");
     }
     public void selectScene()

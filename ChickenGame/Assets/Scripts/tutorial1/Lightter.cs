@@ -13,6 +13,7 @@ public class Lightter : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player" && chk == false && col.transform.position.y > transform.position.y + 0.2f)
         {
+			GlobalAudioManager.instance.UpblockSound ();
             chk = true;
             isMove = true;
             player.transform.SetParent(skyBlock.transform);
