@@ -20,7 +20,7 @@ public class Tutorial3Manager : MonoBehaviour {
     public void reStart()
     {
         Hide();
-        SceneManager.LoadScene("tutorial3");
+        SceneManager.LoadScene("loadingScene");
     }
     public void selectScene()
     {

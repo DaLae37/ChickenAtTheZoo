@@ -9,7 +9,7 @@ public class TutoClear : MonoBehaviour {
         {
             if (!PlayerPrefs.HasKey("tutorial3") || PlayerPrefs.GetInt("tutorial3") == 0)
                 PlayerPrefs.SetInt("tutorial3", 1);
-            SceneManager.LoadScene("stage1");
+            SceneManager.LoadScene("clearScene");
         }
     }
 }

@@ -6,7 +6,8 @@ public class redButton : MonoBehaviour {
 
 
 	public Sprite usedButton;
-	public GameObject m;
+	public GameObject rm;
+	public GameObject lm;
 	public GameObject open;
 	public bool chk=false;
 
@@ -16,9 +17,13 @@ public class redButton : MonoBehaviour {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = usedButton;
 
 
-			Destroy (m.gameObject);
-			m.transform.Translate (new Vector3 (1f, 0, 2));
-			Instantiate (open, m.transform.position, Quaternion.identity);
+			Destroy (rm.gameObject);
+			rm.transform.Translate (new Vector3 (1f, 0, 2));
+			Instantiate (open, rm.transform.position, Quaternion.identity);
+
+			Destroy (lm.gameObject);
+			lm.transform.Translate (new Vector3 (-1f, 0, 2));
+			Instantiate (open, lm.transform.position, Quaternion.identity);
 		}
 	}
 }

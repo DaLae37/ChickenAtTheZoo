@@ -17,10 +17,9 @@ public class Lightter : MonoBehaviour {
             isMove = true;
             player.transform.SetParent(skyBlock.transform);
             gameObject.GetComponent<SpriteRenderer>().sprite = usedButton;
-            Destroy(gameObject.GetComponent<BoxCollider2D>());
         }
     }
-    void Update()
+    void FixedUpdate()
     {
         if (isMove)
         {

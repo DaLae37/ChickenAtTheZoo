@@ -11,10 +11,10 @@ public class Pado : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Time.timeScale = 1;
-        deltaX += Time.deltaTime;
+        deltaX += Time.smoothDeltaTime;
         this.transform.Translate(Vector3.up * Mathf.Sin(deltaX * 7) * 0.02f);
     }
 }

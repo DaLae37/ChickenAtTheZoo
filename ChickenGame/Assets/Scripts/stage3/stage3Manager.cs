@@ -20,7 +20,7 @@ public class stage3Manager : MonoBehaviour {
     public void reStart()
     {
         Hide();
-        SceneManager.LoadScene("stage3");
+        SceneManager.LoadScene("loadingScene");
     }
     public void selectScene()
     {

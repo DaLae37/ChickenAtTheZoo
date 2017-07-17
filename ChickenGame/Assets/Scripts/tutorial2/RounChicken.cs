@@ -23,7 +23,7 @@ public class RounChicken : MonoBehaviour
         {
             if(!PlayerPrefs.HasKey("tutorial2") || PlayerPrefs.GetInt("tutorial2") == 0)
                 PlayerPrefs.SetInt("tutorial2", 1);
-            SceneManager.LoadScene("tutorial3");
+            SceneManager.LoadScene("clearScene");
         }
     }
     public void Update()

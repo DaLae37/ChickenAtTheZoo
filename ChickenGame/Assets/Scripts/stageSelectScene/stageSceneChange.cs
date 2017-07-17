@@ -21,30 +21,37 @@ public class stageSceneChange : MonoBehaviour
     }
     public void tutorial1()
     {
-        SceneManager.LoadScene("tutorial1");
+        PlayerPrefs.SetString("load", "tutorial1");
+        SceneManager.LoadScene("loadingScene");
     }
     public void tutorial2()
     {
-        SceneManager.LoadScene("tutorial2");
+        PlayerPrefs.SetString("load", "tutorial2");
+        SceneManager.LoadScene("loadingScene"); ;
     }
     public void tutorial3()
     {
-        SceneManager.LoadScene("tutorial3");
+        PlayerPrefs.SetString("load", "tutorial3");
+        SceneManager.LoadScene("loadingScene");
     }
     public void stage1()
     {
-        SceneManager.LoadScene("stage1");
+        PlayerPrefs.SetString("load", "stage1");
+        SceneManager.LoadScene("loadingScene");
     }
     public void stage2()
     {
-        SceneManager.LoadScene("stage2");
+        PlayerPrefs.SetString("load", "stage2");
+        SceneManager.LoadScene("loadingScene");
     }
     public void stage3()
     {
-        SceneManager.LoadScene("stage3");
+        PlayerPrefs.SetString("load", "stage3");
+        SceneManager.LoadScene("loadingScene");
     }
     public void stage4()
     {
-        SceneManager.LoadScene("stage4");
+        PlayerPrefs.SetString("load", "stage4");
+        SceneManager.LoadScene("loadingScene");
     }
 }

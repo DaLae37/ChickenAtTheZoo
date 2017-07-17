@@ -9,7 +9,7 @@ public class isClear : MonoBehaviour {
         {
             if (!PlayerPrefs.HasKey("tutorial1") || PlayerPrefs.GetInt("tutorial1") == 0)
                 PlayerPrefs.SetInt("tutorial1", 1);
-            SceneManager.LoadScene("tutorial2");
+            SceneManager.LoadScene("clearScene");
         }
     }
 }
