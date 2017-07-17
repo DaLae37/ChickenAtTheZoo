@@ -22,14 +22,50 @@ public class Player : MonoBehaviour {
 	}
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.collider.tag == "Escape") {
-			GlobalAudioManager.instance.PotalSound ();
-		}
-		else if (collision.collider.tag == "Lion") {
-			SceneManager.LoadScene ("gameOverScene");
-		}
-        else if (collision.collider.tag == "Player"||collision.collider.tag == "Stone"||collision.collider.tag == "Ground") {
-			GlobalAudioManager.instance.GroundSound ();
+        if (collision.collider.tag == "Escape")
+        {
+            GlobalAudioManager.instance.PotalSound();
+            if (this.ToString().Equals("player1 (Player)"))
+            {
+                PlayerControl.instance.playerchk[0] = true;
+                if (!PlayerControl.instance.playerchk[1])
+                    PlayerControl.instance.ctrPlayerIndex = 1;
+                else if (!PlayerControl.instance.playerchk[2])
+                    PlayerControl.instance.ctrPlayerIndex = 2;
+                Destroy(PlayerControl.instance.playerList[0]);
+            }
+            else if (this.ToString().Equals("player2 (Player)"))
+            {
+                PlayerControl.instance.playerchk[1] = true;
+                if (!PlayerControl.instance.playerchk[2])
+                    PlayerControl.instance.ctrPlayerIndex = 2;
+                else if (!PlayerControl.instance.playerchk[0])
+                    PlayerControl.instance.ctrPlayerIndex = 0;
+                Destroy(PlayerControl.instance.playerList[1]);
+            }
+            else if (this.ToString().Equals("player3 (Player)"))
+            {
+                PlayerControl.instance.playerchk[2] = true;
+                if (!PlayerControl.instance.playerchk[0])
+                    PlayerControl.instance.ctrPlayerIndex = 0;
+                else if (!PlayerControl.instance.playerchk[1])
+                    PlayerControl.instance.ctrPlayerIndex = 1;
+                Destroy(PlayerControl.instance.playerList[2]);
+            }
+            Destroy(collision.gameObject);
+            PlayerControl.instance.rb = PlayerControl.instance.playerList[PlayerControl.instance.ctrPlayerIndex].GetComponent<Rigidbody2D>();
+            if (PlayerControl.instance.playerchk[0] && PlayerControl.instance.playerchk[1] && PlayerControl.instance.playerchk[2])
+            {
+                SceneManager.LoadScene("clearScene");
+            }
+        }
+        else if (collision.collider.tag == "Lion")
+        {
+            SceneManager.LoadScene("gameOverScene");
+        }
+        else if (collision.collider.tag == "Player" || collision.collider.tag == "Stone" || collision.collider.tag == "Ground")
+        {
+            GlobalAudioManager.instance.GroundSound();
             if (this.ToString().Equals("player1 (Player)"))
             {
                 PlayerControl.instance.isJumping[0] = false;
@@ -44,9 +80,9 @@ public class Player : MonoBehaviour {
             {
                 PlayerControl.instance.isJumping[2] = false;
                 PlayerControl.instance.isDashing[2] = false;
-				PlayerControl.instance.doubleJum = false;
+                PlayerControl.instance.doubleJum = false;
             }
-			PlayerControl.instance.rb.velocity = new Vector3 (0, 0, 0);
+            PlayerControl.instance.rb.velocity = new Vector3(0, 0, 0);
         }
     }
 	public void OnCollisionStay2D(Collision2D collision)

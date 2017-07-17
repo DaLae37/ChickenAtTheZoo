@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour {
 	public bool[] rightchk = new bool[3];
     public bool onLionGround = false;
 
-	private bool[] playerchk = new bool[3];
+	public bool[] playerchk = new bool[3];
 
 	public bool doubleJum = false;
 
@@ -36,7 +36,7 @@ public class PlayerControl : MonoBehaviour {
             isJumping[i] = false;
             leftchk[i] = false;
             rightchk[i] = false;
-			playerchk [i] = true;
+			playerchk [i] = false;
         }
     }
 
@@ -129,18 +129,27 @@ public class PlayerControl : MonoBehaviour {
         
     }
     public void changePlayer(){
-		switch (ctrPlayerIndex)
-		{
-		case 0:
-			ctrPlayerIndex = 1;
-			break;
-		case 1:
-			ctrPlayerIndex = 2;
-			break;
-		case 2:
-			ctrPlayerIndex = 0;
-			break;
-		}
+        switch (ctrPlayerIndex)
+        {
+            case 0:
+                if (!playerchk[1])
+                    ctrPlayerIndex = 1;
+                else if (!playerchk[2])
+                    ctrPlayerIndex = 2;
+                break;
+            case 1:
+                if (!playerchk[2])
+                    ctrPlayerIndex = 2;
+                else if (!playerchk[0])
+                    ctrPlayerIndex = 0;
+                break;
+            case 2:
+                if (!playerchk[0])
+                    ctrPlayerIndex = 0;
+                else if (!playerchk[1])
+                    ctrPlayerIndex = 1;
+                break;
+        }
 		rb = playerList[ctrPlayerIndex].GetComponent<Rigidbody2D>();
 	}
 
