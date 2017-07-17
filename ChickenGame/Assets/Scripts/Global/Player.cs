@@ -7,10 +7,12 @@ public class Player : MonoBehaviour {
 
 
 	void Awake(){
+
 	}
 
 	void Start(){
-	}
+        GlobalAudioManager.instance.StartSound();
+    }
 
 
 	public void OnCollisionEnter2D(Collision2D collision)
@@ -18,10 +20,10 @@ public class Player : MonoBehaviour {
 		if (collision.collider.tag == "Escape") {
 			GlobalAudioManager.instance.PotalSound ();
 		}
-		if (collision.collider.tag == "Lion") {
+		else if (collision.collider.tag == "Lion") {
 			SceneManager.LoadScene ("gameOverScene");
 		}
-		if (collision.collider.tag == "Player"||collision.collider.tag == "Stone"||collision.collider.tag == "Ground") {
+        else if (collision.collider.tag == "Player"||collision.collider.tag == "Stone"||collision.collider.tag == "Ground") {
 			GlobalAudioManager.instance.GroundSound ();
             if (this.ToString().Equals("player1 (Player)"))
             {
@@ -40,6 +42,10 @@ public class Player : MonoBehaviour {
 				PlayerControl.instance.doubleJum = false;
             }
 			PlayerControl.instance.rb.velocity = new Vector3 (0, 0, 0);
+        }
+        else if(collision.collider.tag == "water")
+        {
+            SceneManager.LoadScene("gameOverScene");
         }
     }
 }

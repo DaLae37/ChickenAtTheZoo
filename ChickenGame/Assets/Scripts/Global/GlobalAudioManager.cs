@@ -19,24 +19,31 @@ public class GlobalAudioManager : MonoBehaviour {
 	public AudioClip fallstone;
 	public AudioClip upblock;
 	public AudioClip clear;
-	AudioSource myAudio;
+    public AudioClip water;
+	public AudioSource myAudio;
 
 
 	public float volume;
 	public static GlobalAudioManager instance;
 
 	void Awake(){
-		if (GlobalAudioManager.instance == null)
-			GlobalAudioManager.instance = this;
-	}
+        if (instance == null)
+            instance = this;
+        myAudio = gameObject.GetComponent<AudioSource>();
+    }
 
 	void Start(){
-		myAudio = GetComponent<AudioSource> ();
+       
 	}
-
+    public void WaterSound()
+    {
+        volume = PlayerPrefs.GetFloat("eft");
+        myAudio.volume = volume;
+        myAudio.PlayOneShot(water);
+    }
 	public void StartSound(){
 		volume = PlayerPrefs.GetFloat ("eft");
-		this.myAudio.volume = volume;
+		myAudio.volume = volume;
 		myAudio.PlayOneShot (start);
 	}
 	public void GroundSound(){
@@ -105,7 +112,7 @@ public class GlobalAudioManager : MonoBehaviour {
 		myAudio.PlayOneShot (upblock);
 	}
 	public void ClearSound(){
-		volume = PlayerPrefs.GetFloat ("eft")*2f;
+		volume = PlayerPrefs.GetFloat ("eft");
 		this.myAudio.volume = volume;
 		myAudio.PlayOneShot (clear);
 	}

@@ -12,4 +12,9 @@ public class TutoClear : MonoBehaviour {
             SceneManager.LoadScene("clearScene");
         }
     }
+    private void Update()
+    {
+        if (this.transform.position.y < -15)
+            SceneManager.LoadScene("gameOverScene");
+    }
 }

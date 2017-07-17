@@ -8,22 +8,37 @@ public class Lions : MonoBehaviour {
     public float range = 10f;
     public bool die = false;
     public bool isTacked = false;
+    public int Tracked;
     void FixedUpdate()
     {
-        if (die == false)
+        if(isTacked == false)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[i].transform.position);
+                if (dst < range)
+                {
+                    isTacked = true;
+                    Tracked = i;
+                }
+            }
+
+        }
+        
+        if (die == false && isTacked)
             chkDistance();
     }
     void chkDistance()
     {
-        float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[PlayerControl.instance.ctrPlayerIndex].transform.position);
+        float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[Tracked].transform.position);
 
-        float same = transform.position.x - PlayerControl.instance.playerList[PlayerControl.instance.ctrPlayerIndex].transform.position.x;
+        float same = transform.position.x - PlayerControl.instance.playerList[Tracked].transform.position.x;
         if (Mathf.Abs(same) > 1)
         {
             if (dst < range)
             {
                 Vector3 scale = transform.localScale;
-                if ((int)transform.position.x > (int)PlayerControl.instance.playerList[PlayerControl.instance.ctrPlayerIndex].transform.position.x)
+                if ((int)transform.position.x > (int)PlayerControl.instance.playerList[Tracked].transform.position.x)
                 {
                     transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
                     scale.x = Mathf.Abs(scale.x);
@@ -36,7 +51,8 @@ public class Lions : MonoBehaviour {
                     transform.localScale = scale;
                 }
             }
-
+            else
+                isTacked = false;
         }
     }
 
