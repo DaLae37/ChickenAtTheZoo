@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Diagnostics;
+using debug = UnityEngine.Debug;
+using UnityEngine.SceneManagement;
 public class stage4PlayerControl : MonoBehaviour {
     public static stage4PlayerControl instance;
 
@@ -16,14 +18,15 @@ public class stage4PlayerControl : MonoBehaviour {
     public bool[] leftchk = new bool[4];
     public bool[] rightchk = new bool[4];
     public bool onLionGround = false;
-
+    public bool isGameClear = false;
+    public bool isTimeClock = false;
     public bool[] playerchk = new bool[4];
 
     public bool doubleJum = false;
 
     public Rigidbody2D rb;
     public int ctrPlayerIndex = 0;
-
+    Stopwatch st = new Stopwatch();
     public void Awake()
     {
         if (!instance)
@@ -48,6 +51,15 @@ public class stage4PlayerControl : MonoBehaviour {
     public void FixedUpdate()
     {
 
+        if (isGameClear == true && !isTimeClock)
+        {
+            st.Start();
+            isTimeClock = true;
+        }
+        if (st.ElapsedMilliseconds >= 2000)
+        {
+            SceneManager.LoadScene("clearScene");
+        }
         comMove();
 
         if (leftchk[ctrPlayerIndex] == true)

@@ -110,9 +110,12 @@
     <Compile Include="Assets\Scripts\stage3\stage3Manager.cs" />
     <Compile Include="Assets\Scripts\stage3\stage3Player.cs" />
     <Compile Include="Assets\Scripts\stage3\stage3PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4Lion.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4Manager.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4Player.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4SkyBlock.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4UnderBlock.cs" />
     <Compile Include="Assets\Scripts\stageSelectScene\scrollRectSnap.cs" />
     <Compile Include="Assets\Scripts\stageSelectScene\stageSceneChange.cs" />
     <Compile Include="Assets\Scripts\tutorial1\Lightter.cs" />

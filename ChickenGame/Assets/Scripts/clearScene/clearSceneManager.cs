@@ -27,13 +27,15 @@ public class clearSceneManager : MonoBehaviour
         else if (nowScene.Equals("tutorial2"))
             PlayerPrefs.SetString("load", "tutorial3");
         else if (nowScene.Equals("tutorial3"))
+            PlayerPrefs.SetString("load", "stage3");
+        else if (nowScene.Equals("stage3"))
             PlayerPrefs.SetString("load", "stage1");
         else if (nowScene.Equals("stage1"))
             PlayerPrefs.SetString("load", "stage2");
         else if (nowScene.Equals("stage2"))
-            PlayerPrefs.SetString("load", "stage3");
-        else if (nowScene.Equals("stage3"))
             PlayerPrefs.SetString("load", "stage4");
+        else if (nowScene.Equals("stage4"))
+            PlayerPrefs.SetString("load", "tutorial1");
         SceneManager.LoadScene("loadingScene");
     }
 }

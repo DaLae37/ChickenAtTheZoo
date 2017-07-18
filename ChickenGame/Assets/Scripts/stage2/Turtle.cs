@@ -43,10 +43,18 @@ public class Turtle : MonoBehaviour {
             x = transform.position.x;
             y = transform.position.y;
         }
+        else if(collision.collider.tag == "Untagged")
+        {
+            isDrive = false;
+            if (x != transform.position.x)
+                isBack = true;
+            else
+                isBack = false;
+        }
     }
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.collider.tag == "Player" && isDrive)
         {
             transform.position = new Vector3(collision.transform.position.x, transform.position.y,transform.position.z);
             transform.localScale = new Vector3(-collision.transform.localScale.x, transform.localScale.y, transform.localScale.z);

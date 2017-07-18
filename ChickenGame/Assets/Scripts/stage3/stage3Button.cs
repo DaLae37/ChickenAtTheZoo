@@ -17,7 +17,7 @@ public class stage3Button : MonoBehaviour {
 
 
 			Destroy (m.gameObject);
-			m.transform.Translate (new Vector3 (1f, 0, 2));
+			m.transform.Translate (new Vector3 (1f, 0, 0));
 			Instantiate (open, m.transform.position, Quaternion.identity);
 
 		}

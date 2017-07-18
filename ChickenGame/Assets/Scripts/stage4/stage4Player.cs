@@ -15,7 +15,7 @@ public class stage4Player : MonoBehaviour {
     }
     void Update()
     {
-        if (transform.position.y < -11)
+        if (transform.position.y < -11 || transform.position.y > 25)
             SceneManager.LoadScene("gameOverScene");
     }
     public void OnCollisionEnter2D(Collision2D collision)
