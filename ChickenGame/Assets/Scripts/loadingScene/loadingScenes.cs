@@ -21,7 +21,6 @@ public class loadingScenes : MonoBehaviour {
     {
         fTime += Time.deltaTime;
         slider.value = fTime;
-
         if (fTime >= 1)
         {
             async_operation.allowSceneActivation = true;
@@ -40,7 +39,6 @@ public class loadingScenes : MonoBehaviour {
             while (async_operation.progress < 0.9f)
             {
                 slider.value = async_operation.progress;
-
                 yield return true;
             }
         }

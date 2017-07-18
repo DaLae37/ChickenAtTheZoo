@@ -20,10 +20,16 @@ public class Turtle : MonoBehaviour {
         if (!isDrive && isBack)
         {
             if (x > transform.position.x)
-                pivot = 10;
+            {
+                pivot = 5;
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
             else
-                pivot = -10;
-            transform.position = new Vector3(transform.position.x + pivot * Time.smoothDeltaTime , transform.position.y);
+            {
+                pivot = -5;
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            transform.position = new Vector3(transform.position.x + pivot * Time.smoothDeltaTime , transform.position.y,transform.position.z);
             if (Mathf.Abs(transform.position.x - x) < 0.1)
                 isBack = false;
         }
@@ -42,7 +48,8 @@ public class Turtle : MonoBehaviour {
     {
         if (collision.collider.tag == "Player")
         {
-            transform.position = new Vector3(collision.transform.position.x, transform.position.y);
+            transform.position = new Vector3(collision.transform.position.x, transform.position.y,transform.position.z);
+            transform.localScale = new Vector3(-collision.transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
     }
     void OnCollisionExit2D(Collision2D collision)

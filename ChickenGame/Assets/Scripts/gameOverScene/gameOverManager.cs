@@ -9,6 +9,6 @@ public class gameOverManager : MonoBehaviour {
     }
     public void select()
     {
-        SceneManager.LoadScene("selectScene");
+        SceneManager.LoadScene("stageSelectScene");
     }
 }

@@ -93,7 +93,9 @@
     <Compile Include="Assets\Scripts\settingScene\soundSetting.cs" />
     <Compile Include="Assets\Scripts\stage1\Lion.cs" />
     <Compile Include="Assets\Scripts\stage1\audioManager.cs" />
+    <Compile Include="Assets\Scripts\stage1\deadLion.cs" />
     <Compile Include="Assets\Scripts\stage1\redButton.cs" />
+    <Compile Include="Assets\Scripts\stage1\spin.cs" />
     <Compile Include="Assets\Scripts\stage1\stage1Manager.cs" />
     <Compile Include="Assets\Scripts\stage1\stage1Player.cs" />
     <Compile Include="Assets\Scripts\stage1\stage1PlayerControl.cs" />
@@ -109,6 +111,8 @@
     <Compile Include="Assets\Scripts\stage3\stage3Player.cs" />
     <Compile Include="Assets\Scripts\stage3\stage3PlayerControl.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4Manager.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4Player.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4PlayerControl.cs" />
     <Compile Include="Assets\Scripts\stageSelectScene\scrollRectSnap.cs" />
     <Compile Include="Assets\Scripts\stageSelectScene\stageSceneChange.cs" />
     <Compile Include="Assets\Scripts\tutorial1\Lightter.cs" />

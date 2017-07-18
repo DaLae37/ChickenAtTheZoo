@@ -16,11 +16,14 @@ public class Lions : MonoBehaviour {
         {
             for (int i = 0; i < 3; i++)
             {
-                float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[i].transform.position);
-                if (dst < range)
+                if (!PlayerControl.instance.playerchk[i])
                 {
-                    isTacked = true;
-                    Tracked = i;
+                    float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[i].transform.position);
+                    if (dst < range)
+                    {
+                        isTacked = true;
+                        Tracked = i;
+                    }
                 }
             }
 
@@ -30,30 +33,34 @@ public class Lions : MonoBehaviour {
     }
     void chkDistance()
     {
-        float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[Tracked].transform.position);
-
-        float same = transform.position.x - PlayerControl.instance.playerList[Tracked].transform.position.x;
-        if (Mathf.Abs(same) > 1)
+        if (!PlayerControl.instance.playerchk[Tracked])
         {
-            if (dst < range)
+            float dst = Vector3.Distance(transform.position, PlayerControl.instance.playerList[Tracked].transform.position);
+
+            float same = transform.position.x - PlayerControl.instance.playerList[Tracked].transform.position.x;
+            if (Mathf.Abs(same) > 1)
             {
-                Vector3 scale = transform.localScale;
-                if ((int)transform.position.x > (int)PlayerControl.instance.playerList[Tracked].transform.position.x)
+                if (dst < range)
                 {
-                    transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
-                    scale.x = Mathf.Abs(scale.x);
-                    transform.localScale = scale;
+                    Vector3 scale = transform.localScale;
+                    if ((int)transform.position.x > (int)PlayerControl.instance.playerList[Tracked].transform.position.x)
+                    {
+                        transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
+                        scale.x = Mathf.Abs(scale.x);
+                        transform.localScale = scale;
+                    }
+                    else
+                    {
+                        transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                        scale.x = -Mathf.Abs(scale.x);
+                        transform.localScale = scale;
+                    }
                 }
                 else
-                {
-                    transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-                    scale.x = -Mathf.Abs(scale.x);
-                    transform.localScale = scale;
-                }
+                    isTacked = false;
             }
-            else
-                isTacked = false;
         }
+       
     }
 
     void OnCollisionEnter2D(Collision2D col)
