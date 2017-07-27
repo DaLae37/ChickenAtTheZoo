@@ -43,7 +43,7 @@ public class Turtle : MonoBehaviour {
             x = transform.position.x;
             y = transform.position.y;
         }
-        else if(collision.collider.tag == "Untagged")
+        else if(collision.collider.tag == "Ground")
         {
             isDrive = false;
             if (x != transform.position.x)

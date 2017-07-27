@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Global\Player.cs" />
     <Compile Include="Assets\Scripts\Global\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\clearScene\clearSceneManager.cs" />
+    <Compile Include="Assets\Scripts\explainScene\storySceneManger.cs" />
     <Compile Include="Assets\Scripts\gameOverScene\gameOverManager.cs" />
     <Compile Include="Assets\Scripts\loadingScene\loadingScenes.cs" />
     <Compile Include="Assets\Scripts\mainScene\mainSceneChange.cs" />
@@ -110,14 +111,17 @@
     <Compile Include="Assets\Scripts\stage3\stage3Manager.cs" />
     <Compile Include="Assets\Scripts\stage3\stage3Player.cs" />
     <Compile Include="Assets\Scripts\stage3\stage3PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4InstanceButton.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4Lion.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4Manager.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4Player.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4PlayerControl.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4SkyBlock.cs" />
+    <Compile Include="Assets\Scripts\stage4\stage4Stone.cs" />
     <Compile Include="Assets\Scripts\stage4\stage4UnderBlock.cs" />
     <Compile Include="Assets\Scripts\stageSelectScene\scrollRectSnap.cs" />
     <Compile Include="Assets\Scripts\stageSelectScene\stageSceneChange.cs" />
+    <Compile Include="Assets\Scripts\startScene\startSceneManger.cs" />
     <Compile Include="Assets\Scripts\tutorial1\Lightter.cs" />
     <Compile Include="Assets\Scripts\tutorial1\box.cs" />
     <Compile Include="Assets\Scripts\tutorial1\isClear.cs" />

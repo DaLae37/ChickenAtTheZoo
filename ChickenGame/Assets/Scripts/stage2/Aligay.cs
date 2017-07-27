@@ -20,7 +20,7 @@ public class Aligay : MonoBehaviour {
 
 	void Update () {
 		
-		chkDistance ();
+		chkDistance (); 
 
 		if (onPlayer == true) {
 			openTime += Time.deltaTime;

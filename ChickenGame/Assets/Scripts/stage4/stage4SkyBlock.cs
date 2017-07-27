@@ -28,6 +28,13 @@ public class stage4SkyBlock : MonoBehaviour {
             player = col.gameObject;
         }
     }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.transform.SetParent(null);
+        }
+    }
     void FixedUpdate()
     {
         if (!chk)
@@ -46,7 +53,6 @@ public class stage4SkyBlock : MonoBehaviour {
         if (time >= 3f)
         {
             isMove = false;
-            player.transform.SetParent(null);
         }
     }
 }

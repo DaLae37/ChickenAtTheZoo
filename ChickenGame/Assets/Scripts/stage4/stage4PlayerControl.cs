@@ -74,7 +74,7 @@ public class stage4PlayerControl : MonoBehaviour {
             if (dashSpeed < 0)
                 dashSpeed = -dashSpeed;
         }
-        cm.transform.position = new Vector3(playerList[ctrPlayerIndex].transform.position.x, playerList[ctrPlayerIndex].transform.position.y, cm.transform.position.z);
+        cm.transform.position = new Vector3(playerList[ctrPlayerIndex].transform.position.x, playerList[ctrPlayerIndex].transform.position.y - 1, cm.transform.position.z);
     }
 
 
@@ -84,6 +84,8 @@ public class stage4PlayerControl : MonoBehaviour {
         leftchk[ctrPlayerIndex] = true;
         Vector3 scale = transform.localScale;
         scale.x = -Mathf.Abs(scale.x);
+        if (ctrPlayerIndex == 3)
+            scale.y = -1;
         playerList[ctrPlayerIndex].transform.localScale = scale;
     }
     public void LeftUp()
@@ -96,6 +98,8 @@ public class stage4PlayerControl : MonoBehaviour {
         rightchk[ctrPlayerIndex] = true;
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x);
+        if (ctrPlayerIndex == 3)
+            scale.y = -1;
         playerList[ctrPlayerIndex].transform.localScale = scale;
     }
     public void RightUp()
@@ -158,6 +162,9 @@ public class stage4PlayerControl : MonoBehaviour {
     }
     public void changePlayer()
     {
+        GlobalAudioManager.instance.ChangeSound();
+        rightchk[ctrPlayerIndex] = false;
+        leftchk[ctrPlayerIndex] = false;
         switch (ctrPlayerIndex)
         {
             case 0:
@@ -203,7 +210,10 @@ public class stage4PlayerControl : MonoBehaviour {
         if (Input.GetKey("w") && isJumping[ctrPlayerIndex] == false)
         {
             isJumping[ctrPlayerIndex] = true;
+            if(ctrPlayerIndex!=3)
             rb.velocity = new Vector3(0, jump, 0);
+            else
+                rb.velocity = new Vector3(0, -jump, 0);
         }
         if (Input.GetKey("a"))
         {

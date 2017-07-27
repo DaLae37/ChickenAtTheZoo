@@ -45,16 +45,19 @@ public class stage1Player : MonoBehaviour {
 
 		if (collision.collider.tag == "Player"||collision.collider.tag == "Stone"||collision.collider.tag == "Ground") {
 			audioManager.instance.GroundSound ();
+            int index = 0;
 			if (this.ToString().Equals("player1 (stage1Player)"))
 			{
+                index = 0;
 				stage1PlayerControl.instance.isJumping[0] = false;
 			}
 			else if (this.ToString().Equals("player3 (stage1Player)"))
 			{
+                index = 1;
 				stage1PlayerControl.instance.isJumping[1] = false;
 				stage1PlayerControl.instance.doubleJum = false;
 			}
-			stage1PlayerControl.instance.rb.velocity = new Vector3 (0, 0, 0);
-		}
+            stage1PlayerControl.instance.playerList[index].GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+        }
 	}
 }

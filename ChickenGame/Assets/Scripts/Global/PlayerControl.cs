@@ -128,6 +128,9 @@ public class PlayerControl : MonoBehaviour {
         
     }
     public void changePlayer(){
+        GlobalAudioManager.instance.ChangeSound();
+        rightchk[ctrPlayerIndex] = false;
+        leftchk[ctrPlayerIndex] = false;
         switch (ctrPlayerIndex)
         {
             case 0:

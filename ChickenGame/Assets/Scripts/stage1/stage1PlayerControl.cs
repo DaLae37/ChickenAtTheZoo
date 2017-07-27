@@ -113,8 +113,10 @@ public class stage1PlayerControl : MonoBehaviour {
 
 	}
 	public void changePlayer(){
-		audioManager.instance.ChangeSound ();
-		switch (ctrPlayerIndex)
+        audioManager.instance.ChangeSound ();
+        rightchk[ctrPlayerIndex] = false;
+        leftchk[ctrPlayerIndex] = false;
+        switch (ctrPlayerIndex)
 		{
 		case 0:
 			if(isClear[1]==false)

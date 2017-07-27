@@ -64,6 +64,7 @@ public class stage4Player : MonoBehaviour {
         else if (collision.collider.tag == "Player" || collision.collider.tag == "Stone" || collision.collider.tag == "Ground")
         {
             GlobalAudioManager.instance.GroundSound();
+            int index = 0;
             if (this.ToString().Equals("player1 (stage4Player)"))
             {
                 stage4PlayerControl.instance.isJumping[0] = false;
@@ -71,21 +72,24 @@ public class stage4Player : MonoBehaviour {
             }
             else if (this.ToString().Equals("player2 (stage4Player)"))
             {
+                index = 1;
                 stage4PlayerControl.instance.isJumping[1] = false;
                 stage4PlayerControl.instance.isDashing[1] = false;
             }
             else if (this.ToString().Equals("player3 (stage4Player)"))
             {
+                index = 2;
                 stage4PlayerControl.instance.isJumping[2] = false;
                 stage4PlayerControl.instance.isDashing[2] = false;
                 stage4PlayerControl.instance.doubleJum = false;
             }
             else if (this.ToString().Equals("player4 (stage4Player)"))
             {
+                index = 3;
                 stage4PlayerControl.instance.isJumping[3] = false;
                 stage4PlayerControl.instance.isDashing[3] = false;
             }
-            stage4PlayerControl.instance.rb.velocity = new Vector3(0, 0, 0);
+            stage4PlayerControl.instance.playerList[index].GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         }
     }
     public void OnCollisionStay2D(Collision2D collision)

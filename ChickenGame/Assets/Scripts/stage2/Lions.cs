@@ -10,6 +10,8 @@ public class Lions : MonoBehaviour {
 	public GameObject spin;
     public bool isTacked = false;
     public int Tracked;
+
+
     void FixedUpdate()
     {
         if(isTacked == false)
@@ -31,6 +33,8 @@ public class Lions : MonoBehaviour {
         
         chkDistance();
     }
+
+
     void chkDistance()
     {
         if (!PlayerControl.instance.playerchk[Tracked])

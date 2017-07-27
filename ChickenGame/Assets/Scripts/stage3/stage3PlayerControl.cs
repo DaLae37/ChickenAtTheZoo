@@ -27,6 +27,7 @@ public class stage3PlayerControl : MonoBehaviour {
 
 	public void Start()
 	{
+        GlobalAudioManager.instance.StartSound();
 		rb = player.GetComponent<Rigidbody2D>();
 	}
 
