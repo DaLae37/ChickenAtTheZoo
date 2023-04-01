@@ -1,6 +1,8 @@
 # 나는야 상점주인
 
-![메인]()
+![메인](https://www.dalae37.com/project/chickenatthezoo/resource/image/chickenatthezoo.webp)
+
+![인게임](https://www.dalae37.com/project/chickenatthezoo/resource/image/chickenatthezoo_ingame.webp)
 
 # 개발 엔진
 
@@ -10,4 +12,4 @@
 
 [유튜브]
 
-[파일]()
+[파일](https://github.com/DaLae37/ChickenAtTheZoo/releases/download/v1.1.1/HowToPlay.pdf)
