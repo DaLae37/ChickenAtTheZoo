@@ -1,4 +1,4 @@
-# 나는야 상점주인
+# 동물원의 닭들
 
 ![메인](https://www.dalae37.com/project/chickenatthezoo/resource/image/chickenatthezoo.webp)
 
