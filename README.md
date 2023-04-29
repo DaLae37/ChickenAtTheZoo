@@ -10,6 +10,6 @@
 
 # 플레이 방법
 
-[유튜브]
+[유튜브](https://youtu.be/Y45xhZ5hxmQ)
 
 [파일](https://github.com/DaLae37/ChickenAtTheZoo/releases/download/v1.1.1/HowToPlay.pdf)
